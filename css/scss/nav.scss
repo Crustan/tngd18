@@ -1,0 +1,89 @@
+.scroller > nav {
+    position: fixed;
+    z-index: 9999;
+    right: 100px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+ 
+.scroller > nav a {
+    display: block;
+    position: relative;
+    color: transparent;
+    height: 50px;
+}
+ 
+.scroller > nav a:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 4px solid #000;
+}
+ 
+.scroller > nav a:hover:after {
+    background: rgba(0,0,0,0.2);
+}
+ 
+.scroller > nav a.cbp-fbcurrent:after {
+    background: #fff;
+}
+
+//fullPage.js
+
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+}
+#fp-nav.right {
+    right: 0px;
+}
+#fp-nav ul {
+  margin: 0;
+  padding: 5px;
+  background: rgba(255,255,255,0);
+  border-radius: 3px;
+}
+#fp-nav ul li {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    margin: 7px;
+    position:relative;
+}
+#fp-nav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+	width:16px;
+	height: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+#fp-nav ul li a.active span {
+    background: rgba(255,255,255,0);
+    border: 2px solid rgba(255,255,255,1);
+    box-sizing: content-box;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+#fp-nav ul li a span {
+    @include centre;
+    top:0;
+    width: 8px;
+    height: 8px;
+    background: rgba(255,255,255,1);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    
+}
